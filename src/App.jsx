@@ -1,0 +1,82 @@
+import { useState, useEffect } from "react"
+import './App.css'
+
+const App = () => {
+
+  const [search, setSearch] = useState(""); // Texto digitado
+  const [users, setUsers] = useState([]); // Lista de usuários
+  const [loading, setLoading] = useState(false); // Carregamento  
+  const [error, setError] = useState(null); // Erros 
+
+  // Função de busca
+  const searchUsers = async (text) => {
+    try {
+      setLoading(true);
+      setError(null);
+
+      const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+      const data = await response.json();
+
+      const filteredUsers = data.filter((user) =>
+        user.name.toLowerCase().includes(text.toLowerCase())
+      );
+
+      setUsers(filteredUsers);
+
+    } catch (error) {
+      setError("Erro ao buscar usuários");
+
+    } finally {
+      setLoading(false);
+    }
+
+  };
+
+  // Função de debounce para evitar muitas requisições
+  
+  useEffect(() => {
+    if (search.trim() === "") {
+      setUsers([]);
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      searchUsers(search);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, [search]);
+
+  return (
+     <div className="wrapper">
+    <div className="container">
+      <h1>Buscador de usuários</h1>
+
+      <input type="text" value={search} placeholder="Digite o nome do usuário..." onChange={(e) => setSearch(e.target.value)} />
+
+      {loading && <p>Carregando...</p>}
+      {error && <p>{error}</p>}
+
+      {!loading && users.length === 0 && search.trim() !== "" && (
+        <p>Nenhum usuário encontrado</p>
+      )}
+
+
+      {!loading && !error && users.length > 0 && (
+        <ul>
+          {users.map((user) => (
+            <li key={user.id}>
+              {user.name}
+            </li>
+          ))}
+        </ul>
+      )}
+
+    </div>
+    </div>
+  )
+}
+
+export default App
+

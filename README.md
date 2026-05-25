@@ -12,7 +12,7 @@ Aplicação desenvolvida em React para busca dinâmica de usuários utilizando c
 
 ## 🔗 Deploy
 
-🔗 https://SEU-LINK-VERCEL.vercel.app
+🔗 https://busca-usuarios.vercel.app/
 
 ---
 

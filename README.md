@@ -1,4 +1,4 @@
-# Buscador de Usuários - React
+# 🔍 Buscador de Usuários - React
 
 Aplicação desenvolvida em React para busca dinâmica de usuários utilizando consumo de API, debounce e renderização condicional.
 
@@ -13,11 +13,12 @@ Aplicação desenvolvida em React para busca dinâmica de usuários utilizando c
 <p align="center">
   <img src="./preview_buscador_mobile.jpg" width="250"/>
 </p>
+
 ---
 
 ## 🔗 Deploy
 
-🔗 https://busca-usuarios.vercel.app/
+🔗 [Acessar projeto](https://busca-usuarios.vercel.app/)
 
 ---
 
@@ -74,13 +75,13 @@ Interface adaptada para:
 Clone o repositório:
 
 ```bash
-git clone https://github.com/PatrickCorrea-git/SEU-REPOSITORIO.git
+git clone https://github.com/PatrickCorrea-git/Busca_usuarios.git
 ```
 
 Entre na pasta do projeto:
 
 ```bash
-cd SEU-REPOSITORIO
+cd Busca_usuarios
 ```
 
 Instale as dependências:
@@ -109,4 +110,4 @@ Este projeto utiliza a API pública:
 
 - Desenvolvido por Patrick Corrêa.
 
-- GitHub: https://github.com/PatrickCorrea-git
+- GitHub: [PatrickCorrea-git](https://github.com/PatrickCorrea-git)

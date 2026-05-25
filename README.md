@@ -7,11 +7,11 @@ Aplicação desenvolvida em React para busca dinâmica de usuários utilizando c
 ## 📸 Preview
 
 <p align="center">
-  <img src="./preview_contador_desktop.png" width="700"/>
+  <img src="./preview_buscador_desktop.png" width="700"/>
 </p>
 
 <p align="center">
-  <img src="./preview_contador_mobile.jpg" width="250"/>
+  <img src="./preview_buscador_mobile.jpg" width="250"/>
 </p>
 ---
 
